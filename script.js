@@ -18,7 +18,7 @@ function seleccionar(link) {
 }
 
 
-/*
+
 
 
 //función que muestra el menu responsive
@@ -47,6 +47,7 @@ function efectoHabilidades() {
 
 }
 
+/*
 // Obtén todas las imágenes del portafolio
 const imagenesPortafolio = document.querySelectorAll('.imagen-portafolio');
 
