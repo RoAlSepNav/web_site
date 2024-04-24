@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="estilo.css">
+    <title>RS Data Science</title>
+</head>
+
+
+<body>
+    <!-- SECCION INICIO -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>/RS/</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
+                            <li><a href="#dashboards" onclick="seleccionar(this)">DASHBOARDS</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Íconos del menú responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <!-- Íconos de las redes sociales -->
+                    <div class="redes">
+                        <a href="https://www.linkedin.com/in/rodrigo-sepulveda-navarrete/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/RoAlSepNav" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Bienvenidos</p>
+                <h2>Soy <span>Rodrigo Sepúlveda</span>, Ingeniero Civil y Data Scientist</h2>
+                <p class="descripcion">Este es un espacio para mostrar los proyectos realizados en Power BI.</p>
+                <a href="#dashboards">Ir a Dashboards</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="images/foto-perfil.jpg" alt=""  style="width: 130%;">
+            
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">Sobre Mí</p>
+            <h2>Hola, soy <span>Rodrigo Sepúlveda</span></h2>
+            <!--<h3>Ingeniero Civil y Data Scientist</h3>-->
+            <p>Ingeniero Civil en Obras Civiles formado en el área de estructura, gestión e hidráulica. Adicionalmente, he cursado la carrera de <b>Data Science</b>
+                con metodología bootcamp impartida por Desafío Latam, donde adquirí conocimientos en programación en <b>Python</b>, <b>SQL</b>,
+                <b>Análisis de Datos</b> y <b>Machine Learning</b>.<br><br>
+                Desde entonces, he continuado perfeccionando mis competencias en visualización y análisis de datos a través de la práctica constante y la actualización
+                en herramientas como <b>Power BI</b>. Profesionalmente me caracterizo por ser responsable, respetuoso, con ganas de aprender, con una disposición positiva
+                para trabajar en equipo y comprometido con el logro de los objetivos y metas organizacionales.<br><br>
+                Actualmente me encuentro en búsqueda de nuevos desafíos profesionales que permitan seguir desarrollándome en áreas relacionadas con datos y análisis.</p>
+                <a href="https://drive.google.com/drive/folders/1gxMKWxdU_feq1_bOZb1yRFl-o4-pIp7p?usp=sharing" target="_blank">Descargar CV</a>
+    </section>
+
+    
+    <!-- SECCION DASHBOARDS IMÁGENES-->
+    <section id="dashboards">
+        <h3 class="titulo-seccion">Dashboards</h3>
+
+        <!-- PRIMERA FILA-->
+        <div class="fila">
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-asn.my.canva.site/dashboards-f1" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/f1.png" alt="">
+                <div class="info">
+                    <h4>Formula 1</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-asn.my.canva.site/videojuegos" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/videojuegos.png" alt="">
+                <div class="info">
+                    <h4>Industria Videojuegos</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto
+            <a href="https://rodrigo-asn.my.canva.site/videojuegos" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/videojuegos.png" alt="">
+                <div class="info">
+                    <h4>Industria Videojuegos</h4>
+                    
+                </div>
+            </a>-->
+
+        </div>
+        <!-- SEGUNDA FILA-->
+        <div class="fila">
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-asn.my.canva.site/finanzas" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/finanzas.png" alt="">
+                <div class="info">
+                    <h4>Finanzas</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-asn.my.canva.site/ranking-animes" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/anime.png" alt="">
+                <div class="info">
+                    <h4>Ranking Animes</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto
+            <a href="https://rodrigo-asn.my.canva.site/videojuegos" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/videojuegos.png" alt="">
+                <div class="info">
+                    <h4>Industria Videojuegos</h4>
+                    
+                </div>
+            </a>-->
+
+        </div>
+        <!-- TERCERA FILA-->
+        <div class="fila">
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-a-s-n.my.canva.site/aves" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/ave1.png" alt="">
+                <div class="info">
+                    <h4>Aves Chilenas</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-a-s-n.my.canva.site/tractchun" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/agentes.png" alt="">
+                <div class="info">
+                    <h4>Análisis Agentes</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto
+            <a href="https://rodrigo-asn.my.canva.site/videojuegos" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/videojuegos.png" alt="">
+                <div class="info">
+                    <h4>Industria Videojuegos</h4>
+                    
+                </div>
+            </a>-->
+
+        </div>
+        <!-- CUARTA FILA-->
+        <div class="fila">
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-a-s-n.my.canva.site/accidentes-carretera-uk" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/road_accidents_uk.png" alt="">
+                <div class="info">
+                    <h4>Accidentes Carretera en U.K.</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-a-s-n.my.canva.site/ecommerce" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/ecommerce.png" alt="">
+                <div class="info">
+                    <h4>Ventas Comercio Electrónico</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto
+            <a href="https://rodrigo-asn.my.canva.site/videojuegos" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/videojuegos.png" alt="">
+                <div class="info">
+                    <h4>Industria Videojuegos</h4>
+                    
+                </div>
+            </a>-->
+
+        </div>
+        <!-- QUINTA FILA-->
+        <div class="fila">
+
+            <!-- Agrega aquí tu link del proyecto -->
+            <a href="https://rodrigo-a-s-n.my.canva.site/car-sales-eeuu" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/finanzas.png" alt="">
+                <div class="info">
+                    <h4>Venta de Automóviles en EE.UU.</h4>
+                    <!--<p>Dashboard</p>-->
+                </div>
+            </a>
+
+            <!-- Agrega aquí tu link del proyecto
+            <a href="https://rodrigo-asn.my.canva.site/videojuegos" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/videojuegos.png" alt="">
+                <div class="info">
+                    <h4>Industria Videojuegos</h4>
+                    
+                </div>
+            </a>-->
+
+            <!-- Agrega aquí tu link del proyecto
+            <a href="https://rodrigo-asn.my.canva.site/videojuegos" class="proyecto">
+                <div class="overlay"></div>
+                <img class="imagen-portafolio" src="images/videojuegos.png" alt="">
+                <div class="info">
+                    <h4>Industria Videojuegos</h4>
+                    
+                </div>
+            </a>-->
+        </div>
+    </section>
+
+
+    <!-- SECCION FOOTER-->
+    <footer>
+        <p>Todos los derechos reservados - 2024</p>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/rodrigo-sepulveda-navarrete/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/RoAlSepNav" target="_blank"><i class="fa-brands fa-github"></i></a>
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
