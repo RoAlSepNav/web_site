@@ -340,17 +340,32 @@ footer a {
     }
     
     /* seccion dashboards */
-    #dashboards {
-        padding: 50px 0;
-    }
     #dashboards .fila {
-        display: block;
-    }
-    #dashboards .fila .proyecto {
-        margin: 10px auto;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten a la fila cuando no hay suficiente espacio */
+        justify-content: center; /* Centra los elementos en la fila */
     }
     
+    #dashboards .fila .proyecto {
+        width: calc(70% - 20px); /* Calcula el ancho de cada proyecto para que haya dos por fila con un espacio de 20px entre ellos */
+        margin-bottom: 20px; /* Espacio entre filas */
+    }
 }
+
+@media screen and (max-width: 1080px) {
+    #dashboards .fila .proyecto {
+        width: calc(100% - 10px); /* Calcula el ancho de cada proyecto para que haya dos por fila con un espacio de 10px entre ellos */
+        margin-bottom: 20px; /* Espacio entre filas */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #dashboards .fila .proyecto {
+        width: calc(100% - 10px); /* Calcula el ancho de cada proyecto para que haya dos por fila con un espacio de 10px entre ellos */
+        margin-bottom: 20px; /* Espacio entre filas */
+    }
+}
+
+
 
 
 
