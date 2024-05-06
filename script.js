@@ -1,33 +1,56 @@
-//Función que me aplica el estilo a la opción seleccionada y quita la previamente seleccionada
+//Función que aplica el estilo a la opción seleccionada y quita la previamente seleccionada
 function seleccionar(link) {
     var opciones = document.querySelectorAll('#links a');
-    opciones.forEach(opcion => opcion.className = "");
-    link.className = "seleccionado";
+    opciones.forEach(opcion => opcion.classList.remove("seleccionado"));
+    link.classList.add("seleccionado");
 
-    // Hacemos desaparecer el menú una vez que se ha seleccionado una opción
-    // en modo responsive
+    // Obtener el destino del enlace
+    var destinoId = link.getAttribute("href");
+    var destino = document.querySelector(destinoId);
+
+    // Calcular la posición del destino
+    var offsetTop = destino.offsetTop;
+
+    // Realizar el desplazamiento suave
+    smoothScrollTo(offsetTop);
+
+    // Ocultar el menú responsive si está abierto
     var x = document.getElementById("nav");
-    x.className = "";
-
-    // También puedes cerrar el menú responsive si estás en ese modo
-    // Esto es opcional y dependerá de cómo quieras gestionar el menú en modo responsive
-    var responsiveMenu = document.getElementById("responsive-menu");
-    if (responsiveMenu.className !== "") {
-        responsiveMenu.className = "";
+    if (x.classList.contains("responsive")) {
+        x.classList.remove("responsive");
     }
 }
 
+// Función para hacer el desplazamiento suave
+function smoothScrollTo(offset) {
+    var startY = window.scrollY;
+    var distance = offset - startY;
+    var duration = 1000; // Duración en milisegundos
 
+    var start = null;
+    window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+        var progress = timestamp - start;
+        window.scrollTo(0, easeInOutCubic(progress, startY, distance, duration));
+        if (progress < duration) window.requestAnimationFrame(step);
+    });
+}
 
-
+// Función para calcular el desplazamiento suave con aceleración
+function easeInOutCubic(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t + b;
+    t -= 2;
+    return c / 2 * (t * t * t + 2) + b;
+}
 
 //función que muestra el menu responsive
 function responsiveMenu() {
     var x = document.getElementById("nav");
-    if (x.className === "") {
-        x.className = "responsive";
+    if (x.classList.contains("responsive")) {
+        x.classList.remove("responsive");
     } else {
-        x.className = "";
+        x.classList.add("responsive");
     }
 }
 
@@ -44,7 +67,6 @@ function efectoHabilidades() {
         document.getElementById("bd").classList.add("barra-progreso3");
         document.getElementById("ps").classList.add("barra-progreso4");
     }
-
 }
 
 /*
@@ -92,7 +114,3 @@ imagenesPortafolio.forEach((imagen) => {
 
 
 */
-
-
-
-
